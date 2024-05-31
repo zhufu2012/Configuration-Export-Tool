@@ -1,0 +1,32 @@
+[
+    {
+        "KEY_INDEX": "0_1",
+        "Enemy_Id": 1,
+        "Enemy_Name": "Enemy_Name_1",
+        "Enemy_Describe1": "基础兵种",
+        "Enemy_Describe2": "突击",
+        "DrawFrame": 0,
+        "PhysicalFrame": 0,
+        "Blood": 1000,
+        "Scale": [
+            1.0,
+            1.0
+        ],
+        "Speed": 40
+    },
+    {
+        "KEY_INDEX": "1_2",
+        "Enemy_Id": 2,
+        "Enemy_Name": "Enemy_Name_2",
+        "Enemy_Describe1": "基础兵种2",
+        "Enemy_Describe2": "快速突击",
+        "DrawFrame": 0,
+        "PhysicalFrame": 0,
+        "Blood": 5000,
+        "Scale": [
+            2.0,
+            2.0
+        ],
+        "Speed": 60
+    }
+]

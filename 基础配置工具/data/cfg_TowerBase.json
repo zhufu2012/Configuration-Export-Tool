@@ -1,0 +1,50 @@
+[
+    {
+        "KEY_INDEX": "0_1",
+        "Tower_Id": 1,
+        "DisplayText": "TowerBase_DisplayText_1",
+        "DisplayDescription": "TowerBase_DisplayDescription_1",
+        "TagIdList": [],
+        "Price": [
+            [
+                1,
+                300
+            ],
+            [
+                2,
+                300
+            ]
+        ],
+        "Mass": 10000,
+        "TechCondition": [],
+        "Radius": 20.0,
+        "DisplayRadius": 20.0,
+        "FogOfWarSightRange": 30.0,
+        "IsBuilding": true,
+        "Footprint": []
+    },
+    {
+        "KEY_INDEX": "1_2",
+        "Tower_Id": 2,
+        "DisplayText": "TowerBase_DisplayText_2",
+        "DisplayDescription": "TowerBase_DisplayDescription_2",
+        "TagIdList": [],
+        "Price": [
+            [
+                1,
+                500
+            ],
+            [
+                2,
+                600
+            ]
+        ],
+        "Mass": 20000,
+        "TechCondition": [],
+        "Radius": 30.0,
+        "DisplayRadius": 30.0,
+        "FogOfWarSightRange": 30.0,
+        "IsBuilding": true,
+        "Footprint": []
+    }
+]

@@ -1,0 +1,82 @@
+[
+    {
+        "KEY_INDEX": "0_1",
+        "MapBrushId": 1,
+        "DifficultyLv": 1,
+        "MapName": "基础测试用地图",
+        "MapBaseDescribe": "测试用的地图",
+        "BornPoint": [
+            100.0,
+            100.0
+        ],
+        "CameraBaseCfg": [],
+        "CameraCfg": [],
+        "M_AttributeId_List": [],
+        "E_AttributeId_List": [],
+        "Pass_Condition": []
+    },
+    {
+        "KEY_INDEX": "1_2",
+        "MapBrushId": 2,
+        "DifficultyLv": 2,
+        "MapName": "基础测试用地图",
+        "MapBaseDescribe": "测试用的地图",
+        "BornPoint": [
+            100.0,
+            100.0
+        ],
+        "CameraBaseCfg": [],
+        "CameraCfg": [],
+        "M_AttributeId_List": [],
+        "E_AttributeId_List": [],
+        "Pass_Condition": []
+    },
+    {
+        "KEY_INDEX": "2_3",
+        "MapBrushId": 3,
+        "DifficultyLv": 3,
+        "MapName": "基础测试用地图",
+        "MapBaseDescribe": "测试用的地图",
+        "BornPoint": [
+            100.0,
+            100.0
+        ],
+        "CameraBaseCfg": [],
+        "CameraCfg": [],
+        "M_AttributeId_List": [],
+        "E_AttributeId_List": [],
+        "Pass_Condition": []
+    },
+    {
+        "KEY_INDEX": "3_4",
+        "MapBrushId": 4,
+        "DifficultyLv": 4,
+        "MapName": "基础测试用地图",
+        "MapBaseDescribe": "测试用的地图",
+        "BornPoint": [
+            100.0,
+            100.0
+        ],
+        "CameraBaseCfg": [],
+        "CameraCfg": [],
+        "M_AttributeId_List": [],
+        "E_AttributeId_List": [],
+        "Pass_Condition": []
+    },
+    {
+        "KEY_INDEX": "4_5",
+        "MapBrushId": 5,
+        "DifficultyLv": 5,
+        "MapName": "基础测试用地图",
+        "MapBaseDescribe": "测试用的地图",
+        "BornPoint": [
+            100.0,
+            100.0
+        ],
+        "CameraBaseCfg": [],
+        "CameraCfg": [],
+        "M_AttributeId_List": [],
+        "E_AttributeId_List": [],
+        "Pass_Condition": []
+    }
+]

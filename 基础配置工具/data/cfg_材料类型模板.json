@@ -1,0 +1,20 @@
+[
+    {
+        "KEY_INDEX": "0_1",
+        "Item_Id": 1,
+        "Item_Name": "矿物资源型",
+        "Item_BaseDescribe": ""
+    },
+    {
+        "KEY_INDEX": "1_2",
+        "Item_Id": 2,
+        "Item_Name": "人造资源型",
+        "Item_BaseDescribe": ""
+    },
+    {
+        "KEY_INDEX": "2_3",
+        "Item_Id": 3,
+        "Item_Name": "掉落资源型",
+        "Item_BaseDescribe": ""
+    }
+]

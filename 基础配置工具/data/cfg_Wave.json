@@ -1,0 +1,40 @@
+[
+    {
+        "KEY_INDEX": "0_1",
+        "Wave_Id": 1,
+        "Wave_Name": "第一波",
+        "Wave_Describe": "直接全部刷新",
+        "Wave_Data": [
+            [
+                1,
+                4
+            ],
+            [
+                2,
+                12
+            ]
+        ],
+        "Wave_Type": 1,
+        "Wave_Time": 0,
+        "Wave_After_Time": 1200
+    },
+    {
+        "KEY_INDEX": "1_2",
+        "Wave_Id": 2,
+        "Wave_Name": "第二波",
+        "Wave_Describe": "间隔刷新",
+        "Wave_Data": [
+            [
+                1,
+                6
+            ],
+            [
+                2,
+                15
+            ]
+        ],
+        "Wave_Type": 2,
+        "Wave_Time": 60,
+        "Wave_After_Time": 0
+    }
+]

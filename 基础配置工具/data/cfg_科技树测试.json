@@ -1,0 +1,125 @@
+[
+    {
+        "KEY_INDEX": "0_1",
+        "Id": 1,
+        "Id2": "强化1",
+        "Science_Name": "炮塔装甲强化1",
+        "Science_Describe": "强化护盾和装甲",
+        "Malleability": 1111,
+        "Intensity": 112.4,
+        "Intensity2": 112,
+        "Type": [
+            [
+                1,
+                1
+            ],
+            [
+                2,
+                1
+            ]
+        ],
+        "PoaoType": [
+            1,
+            211
+        ],
+        "RGB": [
+            0,
+            0,
+            0
+        ],
+        "Resources": [
+            [
+                1,
+                100
+            ],
+            [
+                2,
+                200
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "1_2",
+        "Id": 2,
+        "Id2": "强化2",
+        "Science_Name": "炮塔装甲强化2",
+        "Science_Describe": "强化护盾",
+        "Malleability": -1111,
+        "Intensity": 123.2,
+        "Intensity2": 123,
+        "Type": [
+            [
+                1,
+                1
+            ],
+            [
+                2,
+                1
+            ]
+        ],
+        "PoaoType": [
+            1
+        ],
+        "RGB": [
+            0,
+            0,
+            0
+        ],
+        "Resources": [
+            [
+                2,
+                100
+            ],
+            [
+                2,
+                200
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "2_3",
+        "Id": 3,
+        "Id2": "强化3",
+        "Science_Name": "炮塔装甲强化3",
+        "Science_Describe": "强化护盾和特殊装甲",
+        "Malleability": 0,
+        "Intensity": -22.0,
+        "Intensity2": 121,
+        "Type": [
+            [
+                2,
+                1
+            ]
+        ],
+        "PoaoType": [
+            1,
+            3,
+            32
+        ],
+        "RGB": [
+            10,
+            20,
+            30
+        ],
+        "Resources": [
+            [
+                1,
+                2121
+            ]
+        ]
+    },
+    {
+        "KEY_INDEX": "3_4",
+        "Id": 4,
+        "Id2": "强化4",
+        "Science_Name": "炮塔装甲强化4",
+        "Science_Describe": "",
+        "Malleability": 0,
+        "Intensity": 0,
+        "Intensity2": 0,
+        "Type": [],
+        "PoaoType": [],
+        "RGB": [],
+        "Resources": []
+    }
+]

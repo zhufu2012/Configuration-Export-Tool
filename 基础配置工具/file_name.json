@@ -1,0 +1,138 @@
+{
+    "cfg_files": [
+        {
+            "file_name": "cfg_MapBrushMonster",
+            "file_path": "./data/config/data/cfg_MapBrushMonster.json",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "MapBrushId": "int",
+                "DifficultyLv": "int",
+                "MapName": "string",
+                "MapBaseDescribe": "string",
+                "BornPoint": "Vector2",
+                "CameraBaseCfg": "List<float>",
+                "CameraCfg": "List<float>",
+                "M_AttributeId_List": "List<int>",
+                "E_AttributeId_List": "List<int>",
+                "Pass_Condition": "List<List<int>>"
+            }
+        },
+        {
+            "file_name": "cfg_MapBrushPoint",
+            "file_path": "./data/config/data/cfg_MapBrushPoint.json",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "MapBrushId": "int",
+                "Map_Brush_Id": "int",
+                "Brush_Type_Name": "language_id",
+                "Brush_Describe": "string",
+                "Point": "Vector2",
+                "FirstWaveTime": "float",
+                "WaveList": "List<int>",
+                "Shape_Select": "int",
+                "Polygon": "List<Vector2>",
+                "Radius": "float"
+            }
+        },
+        {
+            "file_name": "cfg_Wave",
+            "file_path": "./data/config/data/cfg_Wave.json",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "Wave_Id": "int",
+                "Wave_Name": "string",
+                "Wave_Describe": "string",
+                "Wave_Data": "List<List<int>>",
+                "Wave_Type": "int",
+                "Wave_Time": "int",
+                "Wave_After_Time": "int"
+            }
+        },
+        {
+            "file_name": "cfg_Enemy",
+            "file_path": "./data/config/data/cfg_Enemy.json",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "Enemy_Id": "int",
+                "Enemy_Name": "language_id",
+                "Enemy_Describe1": "string",
+                "Enemy_Describe2": "string",
+                "DrawFrame": "int",
+                "PhysicalFrame": "int",
+                "Blood": "int",
+                "Scale": "Vector2",
+                "Speed": "int"
+            }
+        },
+        {
+            "file_name": "cfg_TowerBase",
+            "file_path": "./data/config/data/cfg_TowerBase.json",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "Tower_Id": "int",
+                "DisplayText": "language_id",
+                "DisplayDescription": "language_id",
+                "TagIdList": "List<int>",
+                "Price": "List<List<int>>",
+                "Mass": "int",
+                "TechCondition": "List<List<int>>",
+                "Radius": "float",
+                "DisplayRadius": "float",
+                "FogOfWarSightRange": "float",
+                "IsBuilding": "bool",
+                "Footprint": "List<List<int>>"
+            }
+        },
+        {
+            "file_name": "cfg_TowerAttr",
+            "file_path": "./data/config/data/cfg_TowerAttr.json",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "Tower_Id": "int",
+                "Attr_Name": "language_id",
+                "Attr_Description": "language_id"
+            }
+        },
+        {
+            "file_name": "cfg_科技树测试",
+            "file_path": "./data/config/data/cfg_科技树测试.json",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "Id": "int",
+                "Id2": "string",
+                "Science_Name": "string",
+                "Science_Describe": "string",
+                "Malleability": "int",
+                "Intensity": "float",
+                "Intensity2": "UInt64",
+                "Type": "List<List<int>>",
+                "PoaoType": "List<int>",
+                "RGB": "List<short>",
+                "Resources": "List<List<int>>"
+            }
+        },
+        {
+            "file_name": "cfg_材料基础模板",
+            "file_path": "./data/config/data/cfg_材料基础模板.json",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "Item_Id": "int",
+                "Item_Name": "string",
+                "Item_BaseDescribe": "string",
+                "Item_Describe": "string",
+                "Item_Type": "List<int>",
+                "Item_Value": "int"
+            }
+        },
+        {
+            "file_name": "cfg_材料类型模板",
+            "file_path": "./data/config/data/cfg_材料类型模板.json",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "Item_Id": "int",
+                "Item_Name": "string",
+                "Item_BaseDescribe": "string"
+            }
+        }
+    ]
+}

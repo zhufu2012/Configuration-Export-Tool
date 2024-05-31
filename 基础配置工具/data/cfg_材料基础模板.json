@@ -1,0 +1,36 @@
+[
+    {
+        "KEY_INDEX": "0_1",
+        "Item_Id": 1,
+        "Item_Name": "废料",
+        "Item_BaseDescribe": "废料的描述",
+        "Item_Describe": "废料的描述",
+        "Item_Type": [
+            1
+        ],
+        "Item_Value": 10
+    },
+    {
+        "KEY_INDEX": "1_2",
+        "Item_Id": 2,
+        "Item_Name": "万能齿轮",
+        "Item_BaseDescribe": "万能齿轮的描述",
+        "Item_Describe": "万能齿轮的描述",
+        "Item_Type": [
+            2
+        ],
+        "Item_Value": 200
+    },
+    {
+        "KEY_INDEX": "2_3",
+        "Item_Id": 3,
+        "Item_Name": "怨灵水晶",
+        "Item_BaseDescribe": "怨灵水晶的描述",
+        "Item_Describe": "怨灵水晶的描述",
+        "Item_Type": [
+            2,
+            3
+        ],
+        "Item_Value": 400
+    }
+]
