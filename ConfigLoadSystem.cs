@@ -44,9 +44,7 @@ namespace Project_Core
             string jsonText = File.ReadAllText("./data/config/file_name.json");
             ConfigFiles file_data = JsonConvert.DeserializeObject<ConfigFiles>(jsonText);
             filedata = file_data.cfg_files;
-			
-			List<ForMatStr> format_str_list = new List<ForMatStr>();
-
+            List<ForMatStr> format_str_list = new List<ForMatStr>();
             foreach (var cfgFile in filedata)
             {
                 string jsonstr = File.ReadAllText(cfgFile.file_path);

@@ -27,11 +27,22 @@ def del_file(path):
                 shutil.rmtree(path_file)
 
 
+def number_to_column_name(n):
+    result = ""
+    while n > 0:
+        n, remainder = divmod(n - 1, 26)
+        result = chr(65 + remainder) + result
+    return result
+
 def data_conver(pathlist):
     data_dict = {}  ##所有配置表的数据
     data_key_dict = {}  ##所有配置表的字段数据
     for file_path in pathlist:  ##对每一个配置文件进行处理
         if file_path.startswith("~$"):
+            continue
+        if file_path.endswith(".xlsx") or file_path.endswith(".xls"):
+            pass
+        else:
             continue
         dicts = read_xlsm.read_text_all(Define_path + r"./基础配置/" + file_path)
         for table_name, item_list in dicts.items():  ##配置文件的一个子表
@@ -79,7 +90,8 @@ def data_conver(pathlist):
                     col = col - 1
                     break
                 print(
-                    f"导出失败！   配置文件:{file_path}  子表：{table_name}  第{col}列 值为{is_export} 导出类型输入错误，导出类型只有1，2，3三种类型！，错误码:3")
+                    f"导出失败！   配置文件:{file_path}  子表：{table_name}  第{number_to_column_name(col)}列 值为{is_export} 导出类型输入错误，导出类型只有1，2，3三种类型！，错误码:3")
+                return None
             for key in item_list[1][2:]:  ##遍历主键
                 if key in key_list:  ##在里面
                     print(

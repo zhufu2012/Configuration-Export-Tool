@@ -3,7 +3,9 @@
 看工具帮助文档能让你大致了解这个工具，
 基础配置文件夹中也有一些模板，可以康康大致是咋配的。
 
-ConfigLoadSystem.cs是一个在godot中使用的，用于读取json数据的类
+ConfigLoadSystem.cs是一个在godot中使用的（你也可以改成Unity的，看你），用于读取json数据的类
+使用了Newtonsoft.Json，所以你的项目还得下载它
+
 读取首先读取的是基础配置工具目录下的file_name.json文件，
 file_name的json中每个表都有三个字段file_name,file_path,key_list
 
