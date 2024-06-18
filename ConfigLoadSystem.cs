@@ -15,7 +15,8 @@ namespace Project_Core
         public string file_path { get; set; }
         public Dictionary<string, string> key_list { get; set; }
     }
-
+	
+	//file_name文件中的数据
     public class ConfigFiles
     {
         public List<ConfigDict> cfg_files { get; set; }
@@ -31,17 +32,18 @@ namespace Project_Core
         }
     }
 
-    //配置加载器-加载游戏所有配置数据
+    //配置加载器-加载游戏所有配置数据-注释-改成初始化就创建
     public partial class ConfigLoadSystem : Node
     {
         //配置数据
         public static List<ConfigDict> filedata;
         public static Dictionary<string, Dictionary<string, Dictionary<string, object>>> config_dict
             = new Dictionary<string, Dictionary<string, Dictionary<string, object>>>();
-        //基础
-        public override void _Ready()
-        {
-            string jsonText = File.ReadAllText("./data/config/file_name.json");
+        
+		
+		static ConfigLoadSystem()
+		{
+			string jsonText = File.ReadAllText("./data/config/file_name.json");
             ConfigFiles file_data = JsonConvert.DeserializeObject<ConfigFiles>(jsonText);
             filedata = file_data.cfg_files;
             List<ForMatStr> format_str_list = new List<ForMatStr>();
@@ -71,11 +73,9 @@ namespace Project_Core
 
                 config_dict[cfgFile.file_name] = innerDict;
             }
-
-
-            Log.PrintDict(GetCfgKey("cfg_Enemy", "1_2"));
-            Log.PrintDict(GetCfgKey("cfg_Enemy", "0_1"));
-        }
+            Log.PrintDict(GetCfgKey("cfg_Enemy", "1_2"));//测试
+            Log.PrintDict(GetCfgKey("cfg_Enemy", "0_1"));//测试
+		}
 
 
         /// <summary>
@@ -206,7 +206,7 @@ namespace Project_Core
                     return value.ToObject<List<List<float>>>();
                 case "List<List<string>>":
                     return value.ToObject<List<List<string>>>();
-                // Add more cases for other types as needed
+                // 根据需要添加其他类型转换代码
                 default:
                     return value;
             }

@@ -1,0 +1,34 @@
+[
+    {
+        "KEY_INDEX": "0_1",
+        "ItemId": 1,
+        "ItemName": "废料",
+        "ItemBaseDescribe": "废料----",
+        "ItemImg": "./data/config/images/ID_939AC8FC18334A08863030C950C79B6C.png",
+        "image": "./data/config/images/ID_31D4D0A79C894E47B87D911C34A74D14.png"
+    },
+    {
+        "KEY_INDEX": "1_2",
+        "ItemId": 2,
+        "ItemName": "万能齿轮",
+        "ItemBaseDescribe": "万能齿轮----",
+        "ItemImg": "./data/config/images/ID_8468A759A4F14251AF11A7BB2CC96E9F.png",
+        "image": "./data/config/images/ID_3810F6E807B2445394E68D66882E4197.png"
+    },
+    {
+        "KEY_INDEX": "2_3",
+        "ItemId": 3,
+        "ItemName": "怨灵水晶",
+        "ItemBaseDescribe": "怨灵水晶-----",
+        "ItemImg": "./data/config/images/ID_5B7B3AD2D12B4F01A2F925F96FFFB78A.png",
+        "image": "./data/config/images/ID_9309EF61719C429E951CC3A89AB4002B.png"
+    },
+    {
+        "KEY_INDEX": "3_4",
+        "ItemId": 4,
+        "ItemName": "次元岛溶剂",
+        "ItemBaseDescribe": "次元岛溶剂———",
+        "ItemImg": "./data/config/images/ID_6CDAFD46F94845659D2079055E20B351.png",
+        "image": "./data/config/images/ID_7CF6053CD50C41D0BB44AA5E01B7C92E.png"
+    }
+]

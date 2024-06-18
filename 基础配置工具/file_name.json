@@ -133,6 +133,18 @@
                 "Item_Name": "string",
                 "Item_BaseDescribe": "string"
             }
+        },
+        {
+            "file_name": "cfg_ziyuan",
+            "file_path": "./data/config/data/cfg_ziyuan.json",
+            "key_list": {
+                "KEY_INDEX": "string",
+                "ItemId": "int",
+                "ItemName": "string",
+                "ItemBaseDescribe": "string",
+                "ItemImg": "Texture2D",
+                "image": "Texture2D"
+            }
         }
     ]
 }

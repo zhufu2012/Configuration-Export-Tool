@@ -1,3 +1,14 @@
+import read_xlsm
+
+export_iamge_path = read_xlsm.read_file("./基础配置工具/项目配置图片路径.txt")
+
+def number_to_column_name(n):
+    result = ""
+    while n > 0:
+        n, remainder = divmod(n - 1, 26)
+        result = chr(65 + remainder) + result
+    return result
+
 ##转换为INT
 def TO_INT(file_path, table_name, Col_x, Col_y, variable):
     if isinstance(variable, int):
@@ -8,7 +19,7 @@ def TO_INT(file_path, table_name, Col_x, Col_y, variable):
             return converted_variable
         except ValueError:
             print(
-                f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{Col_x}列 ，数据{variable}转换为INT 时出现错误！")
+                f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{number_to_column_name(Col_x)}列 ，数据{variable}转换为INT 时出现错误！")
             return None
 
 
@@ -24,7 +35,7 @@ def TO_BOOL(file_path, table_name, Col_x, Col_y, variable):
                 return False
         except ValueError:
             print(
-                f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{Col_x}列 ，数据{variable}转换为BOOL 时出现错误！")
+                f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{number_to_column_name(Col_x)}列 ，数据{variable}转换为BOOL 时出现错误！")
             return None
 
 
@@ -38,7 +49,7 @@ def TO_BYTE(file_path, table_name, Col_x, Col_y, variable):
             return converted_variable
         except ValueError:
             print(
-                f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{Col_x}列 ，数据{variable}转换为BYTE 时出现错误！")
+                f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{number_to_column_name(Col_x)}列 ，数据{variable}转换为BYTE 时出现错误！")
             return None
 
 
@@ -51,7 +62,7 @@ def TO_UINT64(file_path, table_name, Col_x, Col_y, variable):
             return converted_variable
         except ValueError:
             print(
-                f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{Col_x}列 ，数据{variable}转换为UINT64 时出现错误！")
+                f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{number_to_column_name(Col_x)}列 ，数据{variable}转换为UINT64 时出现错误！")
             return None
 
 
@@ -60,7 +71,7 @@ def TO_FLOAT(file_path, table_name, Col_x, Col_y, variable):
         converted_variable = float(variable)
         return converted_variable
     except ValueError:
-        print(f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{Col_x}列 ，数据{variable}转换为FLOAT 时出现错误！")
+        print(f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{number_to_column_name(Col_x)}列 ，数据{variable}转换为FLOAT 时出现错误！")
         return None
 
 
@@ -74,7 +85,7 @@ def TO_BOOL_LIST(file_path, table_name, Col_x, Col_y, variable):
         return [True if (val.strip().lower() == 'true' or val.strip().lower() == 'TRUE') else False for val in str(variable).split('|')]
     except Exception as e:
         print(
-            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{Col_x}列 ，数据{variable}转换为BOOL列表时出现错误：{e}")
+            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{number_to_column_name(Col_x)}列 ，数据{variable}转换为BOOL列表时出现错误：{e}")
         return None
 
 
@@ -84,7 +95,7 @@ def TO_BYTE_LIST(file_path, table_name, Col_x, Col_y, variable):
         return [int(val.strip()).to_bytes(1, byteorder='big') for val in str(variable).split('|')]
     except Exception as e:
         print(
-            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{Col_x}列 ，数据{variable}转换为BYTE列表时出现错误：{e}")
+            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{number_to_column_name(Col_x)}列 ，数据{variable}转换为BYTE列表时出现错误：{e}")
         return None
 
 
@@ -94,7 +105,7 @@ def TO_INT_LIST(file_path, table_name, Col_x, Col_y, variable):
         return [int(val.strip()) for val in str(variable).split('|')]
     except Exception as e:
         print(
-            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{Col_x}列 ，数据{variable}转换为INT列表时出现错误：{e}")
+            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{number_to_column_name(Col_x)}列 ，数据{variable}转换为INT列表时出现错误：{e}")
         return None
 
 
@@ -104,7 +115,7 @@ def TO_SHORT_LIST(file_path, table_name, Col_x, Col_y, variable):
         return [int(val.strip()) for val in variable.split('|')]
     except Exception as e:
         print(
-            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{Col_x}列 ，数据{variable}转换为SHORT列表时出现错误：{e}")
+            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{number_to_column_name(Col_x)}列 ，数据{variable}转换为SHORT列表时出现错误：{e}")
         return None
 
 
@@ -114,7 +125,7 @@ def TO_UINT64_LIST(file_path, table_name, Col_x, Col_y, variable):
         return [int(val.strip()) for val in variable.split('|')]
     except Exception as e:
         print(
-            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{Col_x}列 ，数据{variable}转换为UINT64列表时出现错误：{e}")
+            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{number_to_column_name(Col_x)}列 ，数据{variable}转换为UINT64列表时出现错误：{e}")
         return None
 
 
@@ -124,7 +135,7 @@ def TO_FLOAT_LIST(file_path, table_name, Col_x, Col_y, variable):
         return [float(val.strip()) for val in variable.split('|')]
     except Exception as e:
         print(
-            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{Col_x}列 ，数据{variable}转换为FLOAT列表时出现错误：{e}")
+            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{number_to_column_name(Col_x)}列 ，数据{variable}转换为FLOAT列表时出现错误：{e}")
         return None
 
 
@@ -134,7 +145,7 @@ def TO_STR_LIST(file_path, table_name, Col_x, Col_y, variable):
         return [str(val) for val in variable.split('|')]
     except Exception as e:
         print(
-            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{Col_x}列 ，数据{variable}转换为STR列表时出现错误：{e}")
+            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{number_to_column_name(Col_x)}列 ，数据{variable}转换为STR列表时出现错误：{e}")
         return None
 
 
@@ -145,7 +156,7 @@ def TO_BOOL_TUPLE(file_path, table_name, Col_x, Col_y, variable):
         return tuple(True if (val.strip().lower() == 'true' or val.strip().lower() == 'TRUE') else False for val in values)
     except Exception as e:
         print(
-            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{Col_x}列 ，数据{variable}转换为BOOL元组时出现错误：{e}")
+            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{number_to_column_name(Col_x)}列 ，数据{variable}转换为BOOL元组时出现错误：{e}")
         return None
 
 
@@ -156,7 +167,7 @@ def TO_BYTE_TUPLE(file_path, table_name, Col_x, Col_y, variable):
         return tuple(int(val.strip()).to_bytes(1, byteorder='big') for val in values)
     except Exception as e:
         print(
-            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{Col_x}列 ，数据{variable}转换为BYTE元组时出现错误：{e}")
+            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{number_to_column_name(Col_x)}列 ，数据{variable}转换为BYTE元组时出现错误：{e}")
         return None
 
 
@@ -167,7 +178,7 @@ def TO_INT_TUPLE(file_path, table_name, Col_x, Col_y, variable):
         return tuple(int(val.strip()) for val in values)
     except Exception as e:
         print(
-            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{Col_x}列 ，数据{variable}转换为INT元组时出现错误：{e}")
+            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{number_to_column_name(Col_x)}列 ，数据{variable}转换为INT元组时出现错误：{e}")
         return None
 
 
@@ -178,7 +189,7 @@ def TO_UINT64_TUPLE(file_path, table_name, Col_x, Col_y, variable):
         return tuple(int(val.strip()) for val in values)
     except Exception as e:
         print(
-            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{Col_x}列 ，数据{variable}转换为UINT64元组时出现错误：{e}")
+            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{number_to_column_name(Col_x)}列 ，数据{variable}转换为UINT64元组时出现错误：{e}")
         return None
 
 
@@ -189,7 +200,7 @@ def TO_FLOAT_TUPLE(file_path, table_name, Col_x, Col_y, variable):
         return tuple(float(val.strip()) for val in values)
     except Exception as e:
         print(
-            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{Col_x}列 ，数据{variable}转换为FLOAT元组时出现错误：{e}")
+            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{number_to_column_name(Col_x)}列 ，数据{variable}转换为FLOAT元组时出现错误：{e}")
         return None
 
 
@@ -200,7 +211,7 @@ def TO_STR_TUPLE(file_path, table_name, Col_x, Col_y, variable):
         return tuple(str(val.strip()) for val in values)
     except Exception as e:
         print(
-            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{Col_x}列 ，数据{variable}转换为STR元组时出现错误：{e}")
+            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{number_to_column_name(Col_x)}列 ，数据{variable}转换为STR元组时出现错误：{e}")
         return None
 
 
@@ -216,7 +227,7 @@ def TO_BOOL_TUPLE_LIST(file_path, table_name, Col_x, Col_y, variable):
         return result
     except Exception as e:
         print(
-            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{Col_x}列 ，数据{variable}转换为<(BOOL)>列表时出现错误：{e}")
+            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{number_to_column_name(Col_x)}列 ，数据{variable}转换为<(BOOL)>列表时出现错误：{e}")
         return None
 
 
@@ -232,7 +243,7 @@ def TO_BYTE_TUPLE_LIST(file_path, table_name, Col_x, Col_y, variable):
         return result
     except Exception as e:
         print(
-            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{Col_x}列 ，数据{variable}转换为<(BYTE)>列表时出现错误：{e}")
+            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{number_to_column_name(Col_x)}列 ，数据{variable}转换为<(BYTE)>列表时出现错误：{e}")
         return None
 
 
@@ -248,7 +259,7 @@ def TO_INT_TUPLE_LIST(file_path, table_name, Col_x, Col_y, variable):
         return result
     except Exception as e:
         print(
-            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{Col_x}列 ，数据{variable}转换为<(INT)>列表时出现错误：{e}")
+            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{number_to_column_name(Col_x)}列 ，数据{variable}转换为<(INT)>列表时出现错误：{e}")
         return None
 
 
@@ -264,7 +275,7 @@ def TO_UINT64_TUPLE_LIST(file_path, table_name, Col_x, Col_y, variable):
         return result
     except Exception as e:
         print(
-            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{Col_x}列 ，数据{variable}转换为<(UINT64)>列表时出现错误：{e}")
+            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{number_to_column_name(Col_x)}列 ，数据{variable}转换为<(UINT64)>列表时出现错误：{e}")
         return None
 
 
@@ -280,7 +291,7 @@ def TO_FLOAT_TUPLE_LIST(file_path, table_name, Col_x, Col_y, variable):
         return result
     except Exception as e:
         print(
-            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{Col_x}列 ，数据{variable}转换为<(FLOAT)>列表时出现错误：{e}")
+            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{number_to_column_name(Col_x)}列 ，数据{variable}转换为<(FLOAT)>列表时出现错误：{e}")
         return None
 
 
@@ -296,7 +307,7 @@ def TO_STR_TUPLE_LIST(file_path, table_name, Col_x, Col_y, variable):
         return result
     except Exception as e:
         print(
-            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{Col_x}列 ，数据{variable}转换为<(STR)>列表时出现错误：{e}")
+            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{number_to_column_name(Col_x)}列 ，数据{variable}转换为<(STR)>列表时出现错误：{e}")
         return None
 
 
@@ -309,7 +320,7 @@ def TO_SHORT(file_path, table_name, Col_x, Col_y, variable):
             return converted_variable
         except ValueError:
             print(
-                f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{Col_x}列 ，数据{variable}转换为SHORT时出现错误！")
+                f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{number_to_column_name(Col_x)}列 ，数据{variable}转换为SHORT时出现错误！")
             return None
 
 
@@ -320,7 +331,7 @@ def TO_SHORT_TUPLE(file_path, table_name, Col_x, Col_y, variable):
         return tuple(int(val.strip()) for val in values)
     except Exception as e:
         print(
-            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{Col_x}列 ，数据{variable}转换为SHORT元组时出现错误：{e}")
+            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{number_to_column_name(Col_x)}列 ，数据{variable}转换为SHORT元组时出现错误：{e}")
         return None
 
 
@@ -336,9 +347,19 @@ def TO_SHORT_TUPLE_LIST(file_path, table_name, Col_x, Col_y, variable):
         return result
     except Exception as e:
         print(
-            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{Col_x}列 ，数据{variable}转换为<(SHORT)>列表时出现错误：{e}")
+            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{number_to_column_name(Col_x)}列 ，数据{variable}转换为<(SHORT)>列表时出现错误：{e}")
         return None
 
+def TO_PNG(file_path, table_name, Col_x, Col_y, variable):
+    try:
+        # Assuming variable is a string with tuples of short values separated by '|'
+        path1 = variable[variable.find("\"")+1:]
+        path2 = path1[:path1.find("\"")]
+        return export_iamge_path + path2 + ".png"
+    except Exception as e:
+        print(
+            f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{number_to_column_name(Col_x)}列 ，数据{variable}转换为<(SHORT)>列表时出现错误：{e}")
+        return None
 
 BaseType = {
     'BOOL': (TO_BOOL, True,'bool'),
@@ -369,6 +390,7 @@ BaseType = {
     '<(UINT64)>': (TO_UINT64_TUPLE_LIST, [], 'List<List<UInt64>>'),
     '<(FLOAT)>': (TO_FLOAT_TUPLE_LIST, [], 'List<List<float>>'),
     '<(STR)>': (TO_STR_TUPLE_LIST, [], 'List<List<string>>'),
+    'PNG': (TO_PNG, [], 'Texture2D'),
     'LANG':(TO_STR,"KeyBase","language_id"),##语言id类型
     '<LANG>':(TO_STR_LIST,[],"<language_id>"), ##语言id列表类型
     'POINT' :(TO_FLOAT_TUPLE, (0,0), 'Vector2'),      ##坐标类型
@@ -378,13 +400,16 @@ BaseType = {
 
 
 def TO_DATA(file_path, table_name, Col_x, Col_y, Type, Data):
-    function, default_value,NewType = BaseType.get(Type,
-                                           (lambda file_path, table_name, Col_x, Col_y, variable: "Invalid", None))
-    if Data == "#BASEVALUE":
-        return default_value
-    else:
-        NewData = function(file_path, table_name, Col_x, Col_y, Data)
-        return NewData
+    try:
+        function, default_value,NewType = BaseType.get(Type, (lambda file_path, table_name, Col_x, Col_y, variable: "Invalid", None))
+        if Data == "#BASEVALUE":
+            return default_value
+        else:
+            NewData = function(file_path, table_name, Col_x, Col_y, Data)
+            return NewData
+    except Exception as e:
+        print(   f"配置文件:{file_path}  子表：{table_name} 第{Col_y}行，第{number_to_column_name(Col_x)}列 ，数据类型错误！不存在类型{Type}")
+        return None
 
 
 def Type_Conversion(export_list,KeyList , TypeList):
